@@ -186,6 +186,7 @@ namespace WindowsFormsApp1
             this.btnDo.TabIndex = 91;
             this.btnDo.Text = "do";
             this.btnDo.UseVisualStyleBackColor = false;
+            this.btnDo.Click += new System.EventHandler(this.btnDo_Click);
             // 
             // btnWhile
             // 
@@ -197,6 +198,7 @@ namespace WindowsFormsApp1
             this.btnWhile.TabIndex = 90;
             this.btnWhile.Text = "while";
             this.btnWhile.UseVisualStyleBackColor = false;
+            this.btnWhile.Click += new System.EventHandler(this.btnWhile_Click);
             // 
             // btnFor
             // 
@@ -208,6 +210,7 @@ namespace WindowsFormsApp1
             this.btnFor.TabIndex = 89;
             this.btnFor.Text = "for";
             this.btnFor.UseVisualStyleBackColor = false;
+            this.btnFor.Click += new System.EventHandler(this.btnFor_Click);
             // 
             // label3
             // 

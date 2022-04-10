@@ -18,11 +18,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        int MyMinScore(int[] nums)
-        {
-            return 10;
-        }
-
         private void btnOddandEven_Click(object sender, EventArgs e)
         {
             
@@ -182,5 +177,62 @@ namespace WindowsFormsApp1
             }
             lblResult.Text = "樂透號碼\n" + b;
         }
+        private void btnFor_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            if (!string.IsNullOrEmpty(this.textBox1.Text) && !string.IsNullOrEmpty(this.textBox2.Text) && !string.IsNullOrEmpty(this.textBox3.Text))
+            {
+                int f = int.Parse(this.textBox1.Text), t = int.Parse(this.textBox2.Text), s = int.Parse(this.textBox3.Text);
+                for (; f <= t; f += s)
+                {
+                    sum += f;
+                }
+            }
+            else
+            {
+                MessageBox.Show("請輸入數值");
+            }
+            lblResult.Text = sum.ToString();
+
+        }
+
+        private void btnWhile_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            if (!string.IsNullOrEmpty(this.textBox1.Text) && !string.IsNullOrEmpty(this.textBox2.Text) && !string.IsNullOrEmpty(this.textBox3.Text))
+            {
+                int f = int.Parse(this.textBox1.Text), t = int.Parse(this.textBox2.Text), s = int.Parse(this.textBox3.Text);
+                while (f <= t)
+                {
+                    sum += f;
+                    f += s;
+                }
+            }
+            else
+            {
+                MessageBox.Show("請輸入數值");
+            }
+            lblResult.Text = sum.ToString();
+        }
+
+        private void btnDo_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            if (!string.IsNullOrEmpty(this.textBox1.Text) && !string.IsNullOrEmpty(this.textBox2.Text) && !string.IsNullOrEmpty(this.textBox3.Text))
+            {
+                int f = int.Parse(this.textBox1.Text), t = int.Parse(this.textBox2.Text), s = int.Parse(this.textBox3.Text);
+                do
+                {
+                    sum += f;
+                    f += s;
+                } while ((f <= t));
+            }
+            else
+            {
+                MessageBox.Show("請輸入數值");
+            }
+            lblResult.Text = sum.ToString();
+        }
     }
+
 }

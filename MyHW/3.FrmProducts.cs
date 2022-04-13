@@ -51,16 +51,16 @@ namespace MyHW
         private void btnSearchUP_Click(object sender, EventArgs e)
         {
             this.productsTableAdapter1.UnitPriceFillBy(this.nwDataSet1.Products, int.Parse(txtMin.Text), int.Parse(txtMax.Text));
-            this.bindingSource1.DataSource = this.nwDataSet1.Products;
-            this.dataGridView1.DataSource = this.bindingSource1;
+            //this.bindingSource1.DataSource = this.nwDataSet1.Products;
+            //this.dataGridView1.DataSource = this.bindingSource1;
         }
 
         private void btnSearchPN_Click(object sender, EventArgs e)
         {
             
             this.productsTableAdapter1.PDNameFillBy(this.nwDataSet1.Products,txtProduct.Text);
-            this.bindingSource1.DataSource = this.nwDataSet1.Products;
-            this.dataGridView1.DataSource = this.bindingSource1;
+            //this.bindingSource1.DataSource = this.nwDataSet1.Products;
+            //this.dataGridView1.DataSource = this.bindingSource1;
         }
     }
 }

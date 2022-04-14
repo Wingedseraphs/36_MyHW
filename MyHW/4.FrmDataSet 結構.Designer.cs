@@ -73,7 +73,7 @@ namespace MyHW
             this.listBox1.ItemHeight = 12;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(973, 248);
+            this.listBox1.Size = new System.Drawing.Size(981, 300);
             this.listBox1.TabIndex = 0;
             // 
             // button1
@@ -116,8 +116,8 @@ namespace MyHW
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1133, 631);
-            this.splitContainer1.SplitterDistance = 156;
+            this.splitContainer1.Size = new System.Drawing.Size(1142, 664);
+            this.splitContainer1.SplitterDistance = 157;
             this.splitContainer1.TabIndex = 2;
             // 
             // splitContainer2
@@ -134,8 +134,8 @@ namespace MyHW
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(973, 631);
-            this.splitContainer2.SplitterDistance = 379;
+            this.splitContainer2.Size = new System.Drawing.Size(981, 664);
+            this.splitContainer2.SplitterDistance = 360;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -152,8 +152,8 @@ namespace MyHW
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(973, 379);
-            this.splitContainer3.SplitterDistance = 120;
+            this.splitContainer3.Size = new System.Drawing.Size(981, 360);
+            this.splitContainer3.SplitterDistance = 113;
             this.splitContainer3.TabIndex = 0;
             // 
             // dataGridView1
@@ -163,7 +163,7 @@ namespace MyHW
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(973, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(981, 113);
             this.dataGridView1.TabIndex = 0;
             // 
             // splitContainer4
@@ -180,8 +180,8 @@ namespace MyHW
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.dataGridView3);
-            this.splitContainer4.Size = new System.Drawing.Size(973, 255);
-            this.splitContainer4.SplitterDistance = 130;
+            this.splitContainer4.Size = new System.Drawing.Size(981, 243);
+            this.splitContainer4.SplitterDistance = 123;
             this.splitContainer4.TabIndex = 0;
             // 
             // dataGridView2
@@ -191,7 +191,7 @@ namespace MyHW
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(973, 130);
+            this.dataGridView2.Size = new System.Drawing.Size(981, 123);
             this.dataGridView2.TabIndex = 0;
             // 
             // dataGridView3
@@ -201,14 +201,14 @@ namespace MyHW
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(973, 121);
+            this.dataGridView3.Size = new System.Drawing.Size(981, 116);
             this.dataGridView3.TabIndex = 0;
             // 
             // FrmDataSet_結構
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 631);
+            this.ClientSize = new System.Drawing.Size(1142, 664);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmDataSet_結構";
             this.Text = "FrmDataSet_結構";

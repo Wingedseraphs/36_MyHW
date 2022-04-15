@@ -117,11 +117,6 @@
     <Compile Include="7.FrmLogon.Designer.cs">
       <DependentUpon>7.FrmLogon.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyAWDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,17 +168,6 @@
     <None Include="AWDDataSet.xss">
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MyAWDataSet.xsc">
-      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MyAWDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MyAWDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MyAWDataSet.xss">
-      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
-    </None>
     <None Include="NWDataSet.xsc">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
     </None>
@@ -219,15 +203,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MyAWDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MyAWDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>MyAWDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

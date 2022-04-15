@@ -19,12 +19,12 @@ namespace MyHW
 
         private void FrmMyAlbum_V1_Load(object sender, EventArgs e)
         {
-            this.albumTableTableAdapter1.Fill(myAlbumDatabaseDataSet1.AlbumTable);
-
-            for (int i = 0; i<=myAlbumDatabaseDataSet1.AlbumTable.Rows.Count-1;i++ ) 
+            this.cityTableTableAdapter1.Fill(myAWDataSet1.CityTable);
+            
+            for(int i = 0; i <= myAWDataSet1.CityTable.Rows.Count-1; i++)
             {
                 LinkLabel x = new LinkLabel();
-                x.Text = $"{myAlbumDatabaseDataSet1.AlbumTable.Rows[i][1]}";
+                x.Text = $"{myAWDataSet1.CityTable.Rows[i][1]}";
                 x.Left = 10;
                 x.Top = 35 * i;
                 x.Tag = i;
@@ -36,13 +36,13 @@ namespace MyHW
 
         private void X_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PhotoFrm photo = new PhotoFrm();
-            photo.Show();
+            LinkLabel x = sender as LinkLabel;
+            if(x != null)
+            {
+                string s = x.Text;
+                this.cityTableTableAdapter1.Fill(this.myAWDataSet1.CityTable);
+                this.dataGridView1.DataSource = this.myAWDataSet1.CityTable;
+            }
         }
     }
 }

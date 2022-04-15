@@ -91,12 +91,6 @@
     <Compile Include="5.FrmAdventure.Designer.cs">
       <DependentUpon>5.FrmAdventure.cs</DependentUpon>
     </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
-      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
-    </Compile>
     <Compile Include="AWDDataSet.cs">
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </Compile>
@@ -105,21 +99,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MyAlbumDatabaseDataSet.Designer.cs">
+    <Compile Include="6.FrmMyAlbum_V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
+      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7.FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7.FrmCustomers.Designer.cs">
+      <DependentUpon>7.FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7.FrmLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7.FrmLogon.Designer.cs">
+      <DependentUpon>7.FrmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MyAlbumDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NWDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PhotoFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhotoFrm.Designer.cs">
-      <DependentUpon>PhotoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,8 +147,11 @@
     <EmbeddedResource Include="6.FrmMyAlbum_V1.resx">
       <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhotoFrm.resx">
-      <DependentUpon>PhotoFrm.cs</DependentUpon>
+    <EmbeddedResource Include="7.FrmCustomers.resx">
+      <DependentUpon>7.FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7.FrmLogon.resx">
+      <DependentUpon>7.FrmLogon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,16 +173,16 @@
     <None Include="AWDDataSet.xss">
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MyAlbumDatabaseDataSet.xsc">
-      <DependentUpon>MyAlbumDatabaseDataSet.xsd</DependentUpon>
+    <None Include="MyAWDataSet.xsc">
+      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MyAlbumDatabaseDataSet.xsd">
+    <None Include="MyAWDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MyAlbumDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>MyAWDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="MyAlbumDatabaseDataSet.xss">
-      <DependentUpon>MyAlbumDatabaseDataSet.xsd</DependentUpon>
+    <None Include="MyAWDataSet.xss">
+      <DependentUpon>MyAWDataSet.xsd</DependentUpon>
     </None>
     <None Include="NWDataSet.xsc">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
@@ -212,12 +221,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyAlbumDatabase.mdf">
+    <Content Include="MyAWDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="MyAlbumDatabase_log.ldf">
+    <Content Include="MyAWDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>MyAlbumDatabase.mdf</DependentUpon>
+      <DependentUpon>MyAWDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

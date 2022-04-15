@@ -19,12 +19,11 @@ namespace MyHW
 
         private void FrmMyAlbum_V1_Load(object sender, EventArgs e)
         {
-            this.cityTableTableAdapter1.Fill(myAWDataSet1.CityTable);
-            
-            for(int i = 0; i <= myAWDataSet1.CityTable.Rows.Count-1; i++)
+            this.cityTableTableAdapter1.Fill(myAlbumDataSet1.CityTable);
+            for (int i = 0; i <= myAlbumDataSet1.CityTable.Rows.Count - 1; i++)
             {
                 LinkLabel x = new LinkLabel();
-                x.Text = $"{myAWDataSet1.CityTable.Rows[i][1]}";
+                x.Text = $"{myAlbumDataSet1.CityTable.Rows[i][1]}";
                 x.Left = 10;
                 x.Top = 35 * i;
                 x.Tag = i;
@@ -33,16 +32,20 @@ namespace MyHW
                 this.splitContainer1.Panel1.Controls.Add(x);
             }
         }
-
         private void X_Click(object sender, EventArgs e)
         {
             LinkLabel x = sender as LinkLabel;
-            if(x != null)
+            if (x != null)
             {
                 string s = x.Text;
-                this.cityTableTableAdapter1.Fill(this.myAWDataSet1.CityTable);
-                this.dataGridView1.DataSource = this.myAWDataSet1.CityTable;
+                this.photoTableTableAdapter1.CityFillBy(myAlbumDataSet1.PhotoTable, $"{s}");
+                this.dataGridView1.DataSource = this.myAlbumDataSet1.PhotoTable;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

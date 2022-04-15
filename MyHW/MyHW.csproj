@@ -99,12 +99,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
-      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
-    </Compile>
     <Compile Include="7.FrmCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +110,17 @@
     </Compile>
     <Compile Include="7.FrmLogon.Designer.cs">
       <DependentUpon>7.FrmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6.FrmMyAlbum_V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
+      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAlbumDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="NWDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +173,17 @@
     <None Include="AWDDataSet.xss">
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="MyAlbumDataSet.xsc">
+      <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyAlbumDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyAlbumDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyAlbumDataSet.xss">
+      <DependentUpon>MyAlbumDataSet.xsd</DependentUpon>
+    </None>
     <None Include="NWDataSet.xsc">
       <DependentUpon>NWDataSet.xsd</DependentUpon>
     </None>
@@ -203,6 +219,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyAlbum.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyAlbum_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MyAlbum.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

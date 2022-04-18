@@ -50,6 +50,7 @@ namespace MyHW
             this.button1.Size = new System.Drawing.Size(71, 23);
             this.button1.TabIndex = 29;
             this.button1.Text = "建立帳號 (&A)";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cancel
             // 
@@ -61,6 +62,7 @@ namespace MyHW
             this.Cancel.Size = new System.Drawing.Size(71, 23);
             this.Cancel.TabIndex = 28;
             this.Cancel.Text = "取消(&C)";
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // OK
             // 
@@ -71,6 +73,7 @@ namespace MyHW
             this.OK.Size = new System.Drawing.Size(71, 23);
             this.OK.TabIndex = 27;
             this.OK.Text = "確定(&O)";
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // PasswordTextBox
             // 
@@ -127,7 +130,7 @@ namespace MyHW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 221);
+            this.ClientSize = new System.Drawing.Size(490, 218);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
@@ -138,6 +141,7 @@ namespace MyHW
             this.Controls.Add(this.LogoPictureBox);
             this.Name = "FrmLogon";
             this.Text = "FrmLogon";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogon_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

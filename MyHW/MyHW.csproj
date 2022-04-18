@@ -91,6 +91,12 @@
     <Compile Include="5.FrmAdventure.Designer.cs">
       <DependentUpon>5.FrmAdventure.cs</DependentUpon>
     </Compile>
+    <Compile Include="6.FrmMyAlbum_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6.FrmMyAlbum_V2.designer.cs">
+      <DependentUpon>6.FrmMyAlbum_V2.cs</DependentUpon>
+    </Compile>
     <Compile Include="AWDDataSet.cs">
       <DependentUpon>AWDDataSet.xsd</DependentUpon>
     </Compile>
@@ -116,6 +122,12 @@
     </Compile>
     <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
       <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImageFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImageFlags.designer.cs">
+      <DependentUpon>FrmImageFlags.cs</DependentUpon>
     </Compile>
     <Compile Include="MyAlbumDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -147,11 +159,17 @@
     <EmbeddedResource Include="6.FrmMyAlbum_V1.resx">
       <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="6.FrmMyAlbum_V2.resx">
+      <DependentUpon>6.FrmMyAlbum_V2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="7.FrmCustomers.resx">
       <DependentUpon>7.FrmCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7.FrmLogon.resx">
       <DependentUpon>7.FrmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImageFlags.resx">
+      <DependentUpon>FrmImageFlags.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -30,6 +30,7 @@ namespace MyHW
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomers));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -43,6 +44,8 @@ namespace MyHW
             this.groupByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.countryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.無ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +56,7 @@ namespace MyHW
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 20);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -71,6 +75,7 @@ namespace MyHW
             this.listView1.Size = new System.Drawing.Size(535, 234);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // contextMenuStrip2
             // 
@@ -144,6 +149,54 @@ namespace MyHW
             this.無ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.無ToolStripMenuItem.Text = "無";
             // 
+            // ImageList1
+            // 
+            this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
+            this.ImageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList1.Images.SetKeyName(0, "FLGGERM.ICO");
+            this.ImageList1.Images.SetKeyName(1, "CTRCAN.ICO");
+            this.ImageList1.Images.SetKeyName(2, "CTRFRAN.ICO");
+            this.ImageList1.Images.SetKeyName(3, "CTRGERM.ICO");
+            this.ImageList1.Images.SetKeyName(4, "CTRITALY.ICO");
+            this.ImageList1.Images.SetKeyName(5, "CTRJAPAN.ICO");
+            this.ImageList1.Images.SetKeyName(6, "CTRMEX.ICO");
+            this.ImageList1.Images.SetKeyName(7, "CTRSKOR.ICO");
+            this.ImageList1.Images.SetKeyName(8, "CTRSPAIN.ICO");
+            this.ImageList1.Images.SetKeyName(9, "CTRUK.ICO");
+            this.ImageList1.Images.SetKeyName(10, "CTRUSA.ICO");
+            this.ImageList1.Images.SetKeyName(11, "FLGASTRL.ICO");
+            this.ImageList1.Images.SetKeyName(12, "FLGAUSTA.ICO");
+            this.ImageList1.Images.SetKeyName(13, "FLGBELG.ICO");
+            this.ImageList1.Images.SetKeyName(14, "FLGBRAZL.ICO");
+            this.ImageList1.Images.SetKeyName(15, "FLGCAN.ICO");
+            this.ImageList1.Images.SetKeyName(16, "FLGDEN.ICO");
+            this.ImageList1.Images.SetKeyName(17, "FLGFIN.ICO");
+            this.ImageList1.Images.SetKeyName(18, "FLGFRAN.ICO");
+            // 
+            // ImageList2
+            // 
+            this.ImageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList2.ImageStream")));
+            this.ImageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList2.Images.SetKeyName(0, "FLGGERM.ICO");
+            this.ImageList2.Images.SetKeyName(1, "CTRCAN.ICO");
+            this.ImageList2.Images.SetKeyName(2, "CTRFRAN.ICO");
+            this.ImageList2.Images.SetKeyName(3, "CTRGERM.ICO");
+            this.ImageList2.Images.SetKeyName(4, "CTRITALY.ICO");
+            this.ImageList2.Images.SetKeyName(5, "CTRJAPAN.ICO");
+            this.ImageList2.Images.SetKeyName(6, "CTRMEX.ICO");
+            this.ImageList2.Images.SetKeyName(7, "CTRSKOR.ICO");
+            this.ImageList2.Images.SetKeyName(8, "CTRSPAIN.ICO");
+            this.ImageList2.Images.SetKeyName(9, "CTRUK.ICO");
+            this.ImageList2.Images.SetKeyName(10, "CTRUSA.ICO");
+            this.ImageList2.Images.SetKeyName(11, "FLGASTRL.ICO");
+            this.ImageList2.Images.SetKeyName(12, "FLGAUSTA.ICO");
+            this.ImageList2.Images.SetKeyName(13, "FLGBELG.ICO");
+            this.ImageList2.Images.SetKeyName(14, "FLGBRAZL.ICO");
+            this.ImageList2.Images.SetKeyName(15, "FLGCAN.ICO");
+            this.ImageList2.Images.SetKeyName(16, "FLGDEN.ICO");
+            this.ImageList2.Images.SetKeyName(17, "FLGFIN.ICO");
+            this.ImageList2.Images.SetKeyName(18, "FLGFRAN.ICO");
+            // 
             // FrmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -175,5 +228,7 @@ namespace MyHW
         private System.Windows.Forms.ToolStripMenuItem groupByToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 無ToolStripMenuItem;
+        internal System.Windows.Forms.ImageList ImageList1;
+        internal System.Windows.Forms.ImageList ImageList2;
     }
 }

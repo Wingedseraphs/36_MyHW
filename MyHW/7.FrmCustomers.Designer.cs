@@ -70,9 +70,11 @@ namespace MyHW
             // listView1
             // 
             this.listView1.HideSelection = false;
+            this.listView1.LargeImageList = this.ImageList2;
             this.listView1.Location = new System.Drawing.Point(56, 96);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(535, 234);
+            this.listView1.SmallImageList = this.ImageList1;
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;

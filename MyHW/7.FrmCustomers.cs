@@ -79,10 +79,10 @@ namespace MyHW
                 using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
                 {
                     
-                    //Random r = new Random();
+                    
                     if (comboBox1.Text == "--AllCountry--")
                     {
-                        
+                        Random r = new Random();
                         conn.Open();
                         SqlCommand command = new SqlCommand();
                         command.CommandText = $"select * from Customers";
@@ -93,7 +93,7 @@ namespace MyHW
                         while (datareader.Read())
                         {
                             ListViewItem lis = this.listView1.Items.Add(datareader[0].ToString());
-                            //lis.ImageIndex = r.Next(0,lis.ImageList.Images.Count);
+                            lis.ImageIndex = r.Next(0,lis.ImageList.Images.Count);
                             if (lis.Index % 2 == 0)
                             {
                                 lis.BackColor = Color.Red;
@@ -117,6 +117,7 @@ namespace MyHW
                     }
                     else
                     {
+                        Random r = new Random();
                         conn.Open();
                         SqlCommand command = new SqlCommand();
                         command.CommandText = $"select * from Customers where country = '{this.comboBox1.Text}'";
@@ -127,7 +128,7 @@ namespace MyHW
                         while (datareader.Read())
                         {
                             ListViewItem lis = this.listView1.Items.Add(datareader[0].ToString());
-                            //lis.ImageIndex = r.Next(0,lis.ImageList.Images.Count);
+                            lis.ImageIndex = r.Next(0,lis.ImageList.Images.Count);
                             if (lis.Index % 2 == 0)
                             {
                                 lis.BackColor = Color.Red;

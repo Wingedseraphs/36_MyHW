@@ -123,6 +123,12 @@
     <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
       <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAll.Designer.cs">
+      <DependentUpon>FrmAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmImageFlags.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="7.FrmLogon.resx">
       <DependentUpon>7.FrmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAll.resx">
+      <DependentUpon>FrmAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmImageFlags.resx">
       <DependentUpon>FrmImageFlags.cs</DependentUpon>
@@ -248,6 +257,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\MyAlbum.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\MyAlbum_log.ldf">
+      <DependentUpon>MyAlbum.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="MyAlbum.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

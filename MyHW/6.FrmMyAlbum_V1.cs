@@ -29,7 +29,7 @@ namespace MyHW
                 x.Tag = i;
 
                 x.Click += X_Click;
-                this.splitContainer1.Panel1.Controls.Add(x);
+               // this.splitContainer1.Panel1.Controls.Add(x);
             }
         }
         private void X_Click(object sender, EventArgs e)

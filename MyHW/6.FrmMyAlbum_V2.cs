@@ -97,7 +97,7 @@ namespace MyHW
                 x.Text = $"{myphotoDataSet1.CityTable.Rows[i][1]}";
                 x.Left = 10;
                 x.Top = 35 * i;
-                x.Tag = i;
+                x.Tag = myphotoDataSet1.CityTable[i].CityID;
 
                 x.Click += X_Click;
                 this.flowLayoutPanel2.Controls.Add(x);
@@ -107,11 +107,11 @@ namespace MyHW
         private void X_Click(object sender, EventArgs e)
         {
             LinkLabel x = sender as LinkLabel;
-            ShowImageId((string)x.Text);
+            ShowImageId((int)x.Tag);
         }
 
 
-        private void ShowImageId(string x)
+        private void ShowImageId(int x)
         {
             flowLayoutPanel1.Controls.Clear();
 
@@ -119,7 +119,7 @@ namespace MyHW
             SqlConnection conn = new SqlConnection(Settings.Default.MyPhotoDatabaseConnectionString);
 
             SqlCommand command = new SqlCommand();
-            command.CommandText = $"select * from PhotoTable p join CityTable c on p.CityID = c.City where c.City = '{x}'";
+            command.CommandText = $"select * from CityTable c join PhotoTable p on p.CityID = c.CityID where p.CityID = '{x}'";
             command.Connection = conn;
             conn.Open();
             SqlDataReader dataReader = command.ExecuteReader();
@@ -130,6 +130,7 @@ namespace MyHW
                 byte[] bytes = (byte[])dataReader["Photo"];
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
                 PictureBox pic = new PictureBox();
+                pic.Image = Image.FromStream(ms);
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Width = 100;
                 pic.Height = 80;

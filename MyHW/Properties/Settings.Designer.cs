@@ -56,17 +56,6 @@ namespace MyHW.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MyAlbumDataba" +
-            "se.mdf;Integrated Security=True")]
-        public string MyAlbumDatabaseConnectionString {
-            get {
-                return ((string)(this["MyAlbumDatabaseConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MyAWDatabase." +
             "mdf;Integrated Security=True")]
         public string MyAWDatabaseConnectionString {
@@ -78,11 +67,10 @@ namespace MyHW.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MyAlbum.mdf;I" +
-            "ntegrated Security=True")]
-        public string MyAlbumConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=MyPhotoAblum;Integrated Security=True")]
+        public string MyPhotoDatabaseConnectionString {
             get {
-                return ((string)(this["MyAlbumConnectionString"]));
+                return ((string)(this["MyPhotoDatabaseConnectionString"]));
             }
         }
     }

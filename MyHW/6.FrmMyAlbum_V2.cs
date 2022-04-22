@@ -22,7 +22,7 @@ namespace MyHW
             this.flowLayoutPanel3.DragDrop += FlowLayoutPanel3_DragDrop; ;
 
             this.comboBox1.Items.Clear();
-            SqlConnection conn = new SqlConnection(Settings.Default.MyAlbumConnectionString);
+            SqlConnection conn = new SqlConnection(Settings.Default.MyPhotoDatabaseConnectionString);
             conn.Open();
             SqlCommand command = new SqlCommand("select * from CityTable", conn);
             SqlDataReader dataReader = command.ExecuteReader();
@@ -50,7 +50,7 @@ namespace MyHW
                 try
                 {
                     SqlConnection conn = null;
-                    using (conn = new SqlConnection(Settings.Default.MyAlbumConnectionString))
+                    using (conn = new SqlConnection(Settings.Default.MyPhotoDatabaseConnectionString))
                     {
                         SqlCommand command = new SqlCommand();
                         command.CommandText = $"Insert into PhotoTable(CityID,Photo) values(@Desc,@Image)";
@@ -90,11 +90,11 @@ namespace MyHW
 
         private void FrmMyAlbum_V2_Load(object sender, EventArgs e)
         {
-            this.cityTableTableAdapter1.Fill(myAlbumDataSet1.CityTable);
-            for (int i = 0; i <= myAlbumDataSet1.CityTable.Rows.Count - 1; i++)
+            this.cityTableTableAdapter1.Fill(this.myphotoDataSet1.CityTable);
+            for (int i = 0; i <= myphotoDataSet1.CityTable.Rows.Count - 1; i++)
             {
                 LinkLabel x = new LinkLabel();
-                x.Text = $"{myAlbumDataSet1.CityTable.Rows[i][1]}";
+                x.Text = $"{myphotoDataSet1.CityTable.Rows[i][1]}";
                 x.Left = 10;
                 x.Top = 35 * i;
                 x.Tag = i;
@@ -116,7 +116,7 @@ namespace MyHW
             flowLayoutPanel1.Controls.Clear();
 
 
-            SqlConnection conn = new SqlConnection(Settings.Default.MyAlbumConnectionString);
+            SqlConnection conn = new SqlConnection(Settings.Default.MyPhotoDatabaseConnectionString);
 
             SqlCommand command = new SqlCommand();
             command.CommandText = $"select * from PhotoTable p join CityTable c on p.CityID = c.City where c.City = '{x}'";

@@ -30,14 +30,16 @@ namespace MyHW
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.myAlbumDataSet1 = new MyHW.MyAlbumDataSet();
-            this.cityTableTableAdapter1 = new MyHW.MyAlbumDataSetTableAdapters.CityTableTableAdapter();
-            this.tableAdapterManager1 = new MyHW.MyAlbumDataSetTableAdapters.TableAdapterManager();
-            this.photoTableTableAdapter1 = new MyHW.MyAlbumDataSetTableAdapters.PhotoTableTableAdapter();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.myphotoDataSet1 = new MyHW.MyphotoDataSet();
+            this.cityTableTableAdapter1 = new MyHW.MyphotoDataSetTableAdapters.CityTableTableAdapter();
+            this.photoTableTableAdapter1 = new MyHW.MyphotoDataSetTableAdapters.PhotoTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -46,7 +48,8 @@ namespace MyHW
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myAlbumDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myphotoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -57,6 +60,7 @@ namespace MyHW
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 408);
@@ -81,6 +85,7 @@ namespace MyHW
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer2.Panel2
@@ -89,6 +94,15 @@ namespace MyHW
             this.splitContainer2.Size = new System.Drawing.Size(800, 534);
             this.splitContainer2.SplitterDistance = 122;
             this.splitContainer2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -103,31 +117,18 @@ namespace MyHW
             this.label1.Text = "My Album";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // openFileDialog1
             // 
-            this.button1.Location = new System.Drawing.Point(604, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 26);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // myAlbumDataSet1
+            // myphotoDataSet1
             // 
-            this.myAlbumDataSet1.DataSetName = "MyAlbumDataSet";
-            this.myAlbumDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.myphotoDataSet1.DataSetName = "MyphotoDataSet";
+            this.myphotoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cityTableTableAdapter1
             // 
             this.cityTableTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.CityTableTableAdapter = this.cityTableTableAdapter1;
-            this.tableAdapterManager1.PhotoTableTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = MyHW.MyAlbumDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // photoTableTableAdapter1
             // 
@@ -150,7 +151,8 @@ namespace MyHW
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.myAlbumDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myphotoDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,10 +163,12 @@ namespace MyHW
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label1;
-        private MyAlbumDataSet myAlbumDataSet1;
-        private MyAlbumDataSetTableAdapters.CityTableTableAdapter cityTableTableAdapter1;
-        private MyAlbumDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private MyAlbumDataSetTableAdapters.PhotoTableTableAdapter photoTableTableAdapter1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private MyphotoDataSet myphotoDataSet1;
+        private MyphotoDataSetTableAdapters.CityTableTableAdapter cityTableTableAdapter1;
+        private MyphotoDataSetTableAdapters.PhotoTableTableAdapter photoTableTableAdapter1;
     }
 }
